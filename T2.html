@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Color and Background Properties</title>
+    <style>
+        /* Body Background with a smooth gradient */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+            color: #333;
+        }
+
+        /* Central content container with padding and shadow */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        /* Add hover effect to make the container pop */
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        /* Elegant Heading with larger font size and shadow */
+        h1 {
+            color: #2c3e50;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 36px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Subheadings with a distinct style */
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        /* Paragraph with background color, text color, and improved padding */
+        p {
+            color: #34495e;
+            background-color: #f39c12;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Change background color on hover for paragraphs */
+        p:hover {
+            background-color: #e67e22;
+        }
+
+        /* Gradient background for a box */
+        .gradient-box {
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Background image, repeated horizontally */
+        .image-box {
+            background-image: url('https://via.placeholder.com/1200x400'); /* Placeholder image */
+            background-repeat: repeat-x; /* Image repeated horizontally */
+            background-size: contain;
+            background-position: center;
+            padding: 100px 20px;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Box with a background image, no-repeat and fixed position */
+        .fixed-image-box {
+            background-image: url('https://via.placeholder.com/1200x800'); /* Placeholder image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 100px 20px;
+            color: #fff;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Exploring CSS Color and Background Properties</h1>
+
+        <h2>Introduction to CSS Color Properties</h2>
+        <p>The `color` property in CSS is used to set the color of text. You can use various formats to define colors, including named colors, hexadecimal, RGB, RGBA, HSL, and HSLA. Colors can also be specified using gradients.</p>
+
+        <h2>Background Colors and Images</h2>
+        <p>The `background-color` property sets the background color of an element. It can be applied to any element, including sections, divs, and paragraphs. For more advanced backgrounds, you can use `background-image` to add images, and `background-repeat` to control how the image repeats.</p>
+
+        <div class="gradient-box">
+            <h2>Gradient Backgrounds</h2>
+            <p>Gradients are a powerful way to create visually appealing backgrounds. They can be linear or radial and offer a range of customization options.</p>
+        </div>
+
+        <h2>Background Image Properties</h2>
+        <p>Background images can enhance the visual appeal of a webpage. You can control how the image is displayed using properties like `background-size`, `background-repeat`, and `background-position`.</p>
+
+        <div class="image-box">
+            <h2>Repeated Background Image</h2>
+            <p>This section uses a background image that repeats horizontally. You can adjust the repeat behavior using the `background-repeat` property.</p>
+        </div>
+
+        <div class="fixed-image-box">
+            <h2>Fixed Background Image</h2>
+            <p>This section features a background image that stays fixed in place even when scrolling. This effect is achieved using `background-attachment: fixed`.</p>
+        </div>
+    </div>
+
+</body>
+</html>

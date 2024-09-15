@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Showcase</title>
+    <style>
+        /* Define CSS Variables */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f5f5f5;
+            --text-color: #fff;
+            --heading-color: #fff;
+            --font-size: 16px;
+            --heading-size: 3em;
+            --spacing: 20px;
+            --border-radius: 10px;
+            --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --transition-speed: 0.3s;
+        }
+
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: var(--font-size);
+            background: url('https://img.freepik.com/premium-photo/wallpaper-cubes_828075-1260.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Heading Styles */
+        h1 {
+            color: var(--heading-color);
+            font-size: var(--heading-size);
+            margin-bottom: var(--spacing);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Container for boxes */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: var(--spacing);
+        }
+
+        /* Box Styling */
+        .box {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            margin: var(--spacing);
+            border-radius: var(--border-radius);
+            width: 300px;
+            box-shadow: var(--box-shadow);
+            transition: transform var(--transition-speed), background-color var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        /* Hover Effects on Box */
+        .box:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Text inside boxes */
+        .box p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        /* Form Styling */
+        form {
+            margin-top: 30px;
+            text-align: left;
+            display: inline-block;
+            width: 300px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"] {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--primary-color);
+            font-size: var(--font-size);
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color var(--transition-speed), background-color var(--transition-speed);
+        }
+
+        /* Focus Effect on Input Fields */
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+
+        /* Submit Button Styling */
+        input[type="submit"] {
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Hover Effect on Submit Button */
+        input[type="submit"]:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .box {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Variables & Form Styling</h1>
+
+    <div class="container">
+        <div class="box">
+            <p>Consistent color schemes using CSS variables make websites easier to maintain and more visually appealing.</p>
+        </div>
+        <div class="box">
+            <p>CSS variables allow for dynamic changes in properties like colors, font sizes, and spacing.</p>
+        </div>
+        <div class="box">
+            <p>Hover effects and smooth transitions enhance the user experience with interactive elements.</p>
+        </div>
+    </div>
+
+    <form>
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

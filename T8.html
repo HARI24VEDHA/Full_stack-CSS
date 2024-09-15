@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Grid Layout for Machine Learning</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/free-photo/abstract-background-molecules-technology-with-polygonal-shapes-connecting-dots-lines-connection-structure-big-data-visualization_7247-4042.jpg?size=626&ext=jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav main main"
+                "footer footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent for readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 8px;
+        }
+
+        .nav {
+            grid-area: nav;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            display: grid;
+            grid-template-areas:
+                "nav1"
+                "nav2";
+            gap: 10px;
+        }
+
+        .nav1 {
+            grid-area: nav1;
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .nav2 {
+            grid-area: nav2;
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: #4a5568;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            display: grid;
+            grid-template-areas:
+                "content sidebar"
+                "content footer";
+            grid-template-rows: 1fr auto;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #2d3748;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #1f2937;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Machine Learning Advanced Grid Layout</h1>
+        </div>
+        <div class="nav">
+            <div class="nav1">
+                <h2>Supervised Learning</h2>
+                <p>Supervised learning algorithms learn from labeled data. This includes algorithms such as linear regression, decision trees, and support vector machines.</p>
+            </div>
+            <div class="nav2">
+                <h2>Unsupervised Learning</h2>
+                <p>Unsupervised learning discovers hidden patterns in unlabeled data. Algorithms include clustering (K-means) and association (Apriori).</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="content">
+                <h2>What is Machine Learning?</h2>
+                <p>Machine learning is a subset of artificial intelligence (AI) that focuses on building systems that learn from data. By using mathematical models, these systems can make predictions, classify data, or recognize patterns without being explicitly programmed for specific tasks.</p>
+                <h3>Types of Machine Learning</h3>
+                <p>There are three main types of machine learning:</p>
+                <ul>
+                    <li>Supervised Learning</li>
+                    <li>Unsupervised Learning</li>
+                    <li>Reinforcement Learning</li>
+                </ul>
+                <p>Each type has distinct use cases depending on the nature of the problem and the availability of labeled or unlabeled data.</p>
+            </div>
+            <div class="sidebar">
+                <h3>Applications of Machine Learning</h3>
+                <p>Machine learning is used in various fields, such as:</p>
+                <ul>
+                    <li>Healthcare (diagnosis, drug discovery)</li>
+                    <li>Finance (fraud detection, stock market prediction)</li>
+                    <li>Retail (recommendation engines, inventory management)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>Deep Learning and Neural Networks</h2>
+            <p>Deep learning, a subset of machine learning, utilizes neural networks to solve complex problems, including image recognition and natural language processing.</p>
+        </div>
+    </div>
+
+</body>
+</html>

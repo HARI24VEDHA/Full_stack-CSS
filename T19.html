@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framework Showcase</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Customizing Bootstrap Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://www.creativefabrica.com/wp-content/uploads/2022/08/19/Abstract-Neon-Glowing-Background-Graphics-36575167-1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .custom-heading {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #f8f9fa;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .card-custom {
+            background-color: rgba(0, 0, 0, 0.7); /* Darker background for cards */
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            color: #fff;
+        }
+
+        .card-custom:hover {
+            transform: scale(1.05);
+        }
+
+        .custom-footer {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn-custom {
+            background-color: #ff5722;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff784e;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="container">
+        <h1 class="custom-heading">Welcome to the CSS Framework Showcase</h1>
+
+        <!-- Responsive Grid Layout -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-custom p-4">
+                    <h3 class="card-title">Bootstrap Grid System</h3>
+                    <p class="card-text">Bootstrap's grid system allows you to create responsive layouts with rows and columns. By using a 12-column grid, you can design flexible and adaptive page structures.</p>
+                    <a href="#" class="btn btn-custom">Learn More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-custom p-4">
+                    <h3 class="card-title">Responsive Design</h3>
+                    <p class="card-text">With Bootstrap, you can easily build websites that look great on any device. The framework includes responsive design utilities and breakpoints that help adapt your layout to different screen sizes.</p>
+                    <a href="#" class="btn btn-custom">Discover More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-custom p-4">
+                    <h3 class="card-title">Customizing Bootstrap</h3>
+                    <p class="card-text">Customize Bootstrap’s default styles by overriding CSS classes. This allows you to create a unique look and feel for your website while still benefiting from Bootstrap's robust features.</p>
+                    <a href="#" class="btn btn-custom">Start Customizing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="custom-footer">
+        &copy; 2024 Your Website. Built with Bootstrap and custom styles.
+    </div>
+
+    <!-- Bootstrap JS (Optional for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

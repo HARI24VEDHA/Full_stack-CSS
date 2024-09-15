@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demonstration</title>
+    <style>
+        /* Apply the background image to the whole webpage */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://th.bing.com/th/id/OIP.VP2bJqKjTmWC3kse91oq-wHaEv?w=1600&h=1024&rs=1&pid=ImgDetMain') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Central content container with padding, shadow, and light gray background */
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f0f0f0; /* Light gray background for the content block */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 5px solid #3498db;
+            background-color: #eaf2f8;
+        }
+
+        .box.content-box {
+            box-sizing: content-box;
+        }
+
+        .box.border-box {
+            box-sizing: border-box;
+        }
+
+        .example {
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid #2ecc71;
+            background-color: #dff0d8;
+        }
+
+        .example h2 {
+            margin-top: 0;
+        }
+
+        .content-box-example,
+        .border-box-example {
+            margin: 10px;
+            padding: 20px;
+            border: 5px solid #3498db;
+        }
+
+        .content-box-example {
+            box-sizing: content-box;
+            background-color: #f9f9f9;
+        }
+
+        .border-box-example {
+            box-sizing: border-box;
+            background-color: #dbe9f4;
+        }
+
+        .example p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSS Box Model Demonstration</h1>
+
+        <div class="box content-box">
+            <h2>Content Box Model</h2>
+            <p>This element uses the <strong>content-box</strong> model. The width and height only apply to the content area. Padding and border are added outside of this area.</p>
+        </div>
+
+        <div class="box border-box">
+            <h2>Border Box Model</h2>
+            <p>This element uses the <strong>border-box</strong> model. The width and height include padding and border. This ensures the element stays the same size regardless of padding or border.</p>
+        </div>
+
+        <div class="example">
+            <h2>Example Box</h2>
+            <p>This is a general example box showing margin, padding, and border effects.</p>
+        </div>
+
+        <div class="content-box-example">
+            <h2>Content Box Example</h2>
+            <p>The width of this element includes only the content, not padding or border. Notice how the total width changes with added padding and border.</p>
+        </div>
+
+        <div class="border-box-example">
+            <h2>Border Box Example</h2>
+            <p>The width of this element includes padding and border, making it easier to manage overall dimensions.</p>
+        </div>
+    </div>
+
+</body>
+</html>

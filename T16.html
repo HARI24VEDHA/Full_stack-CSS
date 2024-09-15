@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes and Pseudo-Elements Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://www.creativefabrica.com/wp-content/uploads/2023/05/30/Luminous-Yellow-Neon-Circle-Design-Graphics-70957024-1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 20px 0;
+            color: #fff;
+            font-size: 2.5em;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Navigation menu styling */
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background: rgba(52, 152, 219, 0.8);
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-menu li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(41, 128, 185, 0.9);
+        }
+
+        .nav-menu a:active {
+            background: rgba(31, 97, 141, 0.9);
+        }
+
+        /* Card styling */
+        .card {
+            width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card::before {
+            content: 'FEATURED';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #e74c3c;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+            transform: rotate(-20deg);
+        }
+
+        .card:hover::before {
+            content: 'HOT DEAL';
+            background: #f39c12;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transform: scale(1.02);
+        }
+
+        /* List styling with nth-child */
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .list li {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            margin-bottom: 10px;
+            border-left: 5px solid #3498db;
+            transition: background 0.3s ease;
+        }
+
+        .list li:nth-child(even) {
+            background: rgba(236, 240, 241, 0.8);
+        }
+
+        .list li:hover {
+            background: rgba(189, 195, 199, 0.8);
+        }
+
+        .list li::before {
+            content: '✔';
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 250px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore CSS Pseudo-Classes and Elements</h1>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <!-- Card with pseudo-elements -->
+    <div class="card">
+        <h2>Product Spotlight</h2>
+        <p>This is our featured product! It has top-quality features at an unbeatable price.</p>
+    </div>
+
+    <!-- List with nth-child and pseudo-elements -->
+    <ul class="list">
+        <li>Comprehensive CSS Tutorial</li>
+        <li>Interactive Learning Platform</li>
+        <li>Real-World Projects</li>
+        <li>Expert-Led Guidance</li>
+        <li>Lifetime Access to Resources</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence Overview</title>
+    <style>
+        /* Apply the background image to the whole webpage */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/free-photo/abstract-background-molecules-technology-with-polygonal-shapes-connecting-dots-lines-connection-structure-big-data-visualization_7247-4042.jpg?size=626&ext=jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Container styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .card {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            .card {
+                padding: 18px;
+                font-size: 1em;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .card {
+                padding: 20px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Artificial Intelligence Overview</h1>
+        </header>
+        <div class="content">
+            <div class="card">
+                <h2>Introduction to AI</h2>
+                <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn. AI encompasses various technologies such as machine learning, natural language processing, and robotics.</p>
+            </div>
+            <div class="card">
+                <h2>Machine Learning</h2>
+                <p>Machine Learning (ML) is a subset of AI that involves training algorithms to learn from and make predictions or decisions based on data. It is widely used in applications such as recommendation systems, image recognition, and predictive analytics.</p>
+            </div>
+            <div class="card">
+                <h2>Natural Language Processing</h2>
+                <p>Natural Language Processing (NLP) enables machines to understand and interpret human language. It is used in applications such as chatbots, language translation, and sentiment analysis.</p>
+            </div>
+            <div class="card">
+                <h2>Applications of AI</h2>
+                <p>AI has numerous applications across various industries including healthcare, finance, automotive, and entertainment. It is used to enhance efficiency, improve decision-making, and create innovative solutions to complex problems.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

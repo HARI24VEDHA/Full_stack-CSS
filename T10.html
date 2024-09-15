@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Example</title>
+    <style>
+        /* Apply background image to the whole webpage */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://img.freepik.com/free-photo/abstract-paper-background-concept_23-2148812698.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the images with some styling */
+        .image-container {
+            margin: 20px auto;
+            max-width: 80%;
+            text-align: center;
+        }
+
+        /* Ensure the images scale nicely and maintain their aspect ratio */
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Heading styling */
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Responsive design for heading */
+        @media (max-width: 767px) {
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Images with `srcset`</h1>
+
+    <div class="image-container">
+        <img 
+            src="https://th.bing.com/th/id/R.82697086eb0d30a622bb900823bbc395?rik=PndYpoXl4JrnNw&riu=http%3a%2f%2fsoftloomittraining.com%2fwp-content%2fuploads%2f2023%2f03%2fpython-programming.jpg&ehk=rockCXh2OMwnRsaf7PxK21%2ffP9A22iB77HNombQ43X8%3d&risl=&pid=ImgRaw&r=0" 
+            srcset="https://th.bing.com/th/id/R.82697086eb0d30a622bb900823bbc395?rik=PndYpoXl4JrnNw&riu=http%3a%2f%2fsoftloomittraining.com%2fwp-content%2fuploads%2f2023%2f03%2fpython-programming.jpg&ehk=rockCXh2OMwnRsaf7PxK21%2ffP9A22iB77HNombQ43X8%3d&risl=&pid=ImgRaw&r=0 320w,
+                    https://th.bing.com/th/id/R.82697086eb0d30a622bb900823bbc395?rik=PndYpoXl4JrnNw&riu=http%3a%2f%2fsoftloomittraining.com%2fwp-content%2fuploads%2f2023%2f03%2fpython-programming.jpg&ehk=rockCXh2OMwnRsaf7PxK21%2ffP9A22iB77HNombQ43X8%3d&risl=&pid=ImgRaw&r=0 480w,
+                    https://th.bing.com/th/id/R.82697086eb0d30a622bb900823bbc395?rik=PndYpoXl4JrnNw&riu=http%3a%2f%2fsoftloomittraining.com%2fwp-content%2fuploads%2f2023%2f03%2fpython-programming.jpg&ehk=rockCXh2OMwnRsaf7PxK21%2ffP9A22iB77HNombQ43X8%3d&risl=&pid=ImgRaw&r=0 800w,
+                    https://th.bing.com/th/id/R.82697086eb0d30a622bb900823bbc395?rik=PndYpoXl4JrnNw&riu=http%3a%2f%2fsoftloomittraining.com%2fwp-content%2fuploads%2f2023%2f03%2fpython-programming.jpg&ehk=rockCXh2OMwnRsaf7PxK21%2ffP9A22iB77HNombQ43X8%3d&risl=&pid=ImgRaw&r=0 1200w"
+            sizes="(max-width: 767px) 100vw,
+                   (max-width: 1024px) 50vw,
+                   33vw"
+            alt="Python Programming"
+            class="responsive-img"
+        >
+    </div>
+</body>
+</html>

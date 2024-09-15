@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://wallpapers.com/images/hd/safeguards-and-cyber-security-jmbns01nyfl7zyc4.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #1f2937; /* Darker shade for header */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #2d3748; /* Darker shade for sidebar */
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: #4a5568; /* Darker shade for main content */
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #e2e8f0; /* Light background for footer */
+            color: #1a202c;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Cybersecurity Overview</h1>
+        </div>
+        <div class="sidebar">
+            <h2>Key Concepts</h2>
+            <p><strong>Network Security:</strong> Protecting network infrastructure from unauthorized access and attacks.</p>
+            <p><strong>Encryption:</strong> The process of encoding information to prevent unauthorized access.</p>
+            <p><strong>Malware:</strong> Malicious software designed to disrupt, damage, or gain unauthorized access to systems.</p>
+        </div>
+        <div class="main">
+            <h2>Cybersecurity Measures</h2>
+            <p>Effective cybersecurity measures are crucial for protecting sensitive data and maintaining the integrity of systems. Key strategies include:</p>
+            <ul>
+                <li><strong>Firewalls:</strong> Monitor and control incoming and outgoing network traffic.</li>
+                <li><strong>Antivirus Software:</strong> Detect and remove malicious software.</li>
+                <li><strong>Intrusion Detection Systems (IDS):</strong> Monitor networks for suspicious activities.</li>
+                <li><strong>Regular Updates:</strong> Keep software and systems updated to patch vulnerabilities.</li>
+            </ul>
+            <p>Implementing these measures helps safeguard against cyber threats and ensures a secure digital environment.</p>
+        </div>
+        <div class="footer">
+            <h2>Resources</h2>
+            <p>For more information on cybersecurity best practices, visit these resources:</p>
+            <ul>
+                <li><a href="https://www.cybersecurity.gov" target="_blank">Cybersecurity.gov</a></li>
+                <li><a href="https://www.sans.org" target="_blank">SANS Institute</a></li>
+                <li><a href="https://www.nist.gov/cyberframework" target="_blank">NIST Cybersecurity Framework</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

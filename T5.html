@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Basics - HTML Layout</title>
+    <style>
+        /* Apply the background image to the whole webpage */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://png.pngtree.com/background/20230619/original/pngtree-abstract-geometric-background-in-a-purple-and-blue-neon-light-3d-picture-image_3760733.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Flex container styling */
+        .container {
+            display: flex;
+            flex-direction: row; /* Arrange items in a row */
+            justify-content: space-between; /* Distribute space between items */
+            align-items: center; /* Center items vertically */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for readability */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .box {
+            background-color: #3498db; /* Main color for boxes */
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1; /* Flex-grow to allow items to grow and fill space */
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff; /* White color for heading to contrast with the background */
+            margin: 20px 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding text shadow for readability */
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #ffffff; /* White color for sub-headings */
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ffffff; /* White color for paragraph text */
+        }
+
+        .box:nth-child(odd) {
+            background-color: #2ecc71; /* Different color for odd boxes */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Basics with Flexbox</h1>
+    
+    <div class="container">
+        <div class="box">
+            <h2>HTML Introduction</h2>
+            <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages and web applications.</p>
+        </div>
+        <div class="box">
+            <h2>HTML Elements</h2>
+            <p>HTML elements are the building blocks of HTML. They include tags like <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, and more.</p>
+        </div>
+        <div class="box">
+            <h2>HTML Attributes</h2>
+            <p>HTML attributes provide additional information about HTML elements. They are always included in the opening tag and come in name/value pairs.</p>
+        </div>
+    </div>
+
+</body>
+</html>

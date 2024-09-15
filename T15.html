@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transforms Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/8f/a9/aa/8fa9aa4c77771ce158922384057543a7.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 40px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .transform-box {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .transform-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Transform styles with new colors */
+        .translate {
+            background-color: #1abc9c; /* Turquoise */
+            transform: translate(50px, 50px);
+        }
+
+        .rotate {
+            background-color: #e67e22; /* Carrot Orange */
+            transform: rotate(45deg);
+        }
+
+        .scale {
+            background-color: #9b59b6; /* Amethyst */
+            transform: scale(1.5);
+        }
+
+        .skew {
+            background-color: #f39c12; /* Bright Yellow */
+            transform: skew(20deg, 10deg);
+        }
+
+        .combined {
+            background-color: #3498db; /* Light Blue */
+            transform: translate(-50px, -50px) rotate(30deg) scale(1.2) skew(10deg, 5deg);
+        }
+
+        .transform-box p {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .transform-box {
+                width: 200px;
+                height: 200px;
+                font-size: 0.9em;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .transform-box {
+                width: 150px;
+                height: 150px;
+                font-size: 0.8em;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transforms Showcase</h1>
+
+    <div class="container">
+        <div class="transform-box translate">
+            <p><strong>Translate</strong><br>Moves the element along the x and y axes.<br>Offsets the element's position.</p>
+        </div>
+        <div class="transform-box rotate">
+            <p><strong>Rotate</strong><br>Rotates the element around its center.<br>Provides a rotating effect.</p>
+        </div>
+        <div class="transform-box scale">
+            <p><strong>Scale</strong><br>Resizes the element, making it larger or smaller.<br>Scales up or down.</p>
+        </div>
+        <div class="transform-box skew">
+            <p><strong>Skew</strong><br>Tilts the element along the x and y axes.<br>Creates a slanted effect.</p>
+        </div>
+        <div class="transform-box combined">
+            <p><strong>Combined</strong><br>Combines all transformations.<br>Shows a complex effect with multiple transforms.</p>
+        </div>
+    </div>
+</body>
+</html>

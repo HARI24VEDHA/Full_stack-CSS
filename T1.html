@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors with Styling</title>
+    <style>
+        /* General Page Background and Centering */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('https://wallpapers.com/images/hd/2440x1440-material-background-2440-x-1440-1i3v4vtb7ufs4vrd.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Element Selector - styles all paragraphs */
+        p {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Class Selector - applies to multiple elements */
+        .intro {
+            font-size: 18px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        /* ID Selector - applies to one unique element */
+        #important-note {
+            color: #FF5733;
+            font-size: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* Attribute Selector - styles links with a specific attribute */
+        a[href^="https"] {
+            color: blue;
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        /* Pseudo-class Selector - changes link color when hovered */
+        a:hover {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        /* Pseudo-element Selector - styles the first letter of paragraphs */
+        p::first-letter {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        /* Italic style for emphasis in paragraphs */
+        em {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CSS Selectors and Advanced Styling</h1>
+
+        <h2>Types of Selectors with Different Styles</h2>
+
+        <p class="intro">In this example, we will explore various types of CSS selectors used to style HTML elements. This paragraph is <em>italicized</em> and underlined using a class selector.</p>
+
+        <h2>1. Element Selector</h2>
+        <p>Element selectors target all instances of a specific element on a page. For example, all paragraphs are styled with the same font and color.</p>
+
+        <h2>2. Class Selector</h2>
+        <p class="intro">Class selectors allow you to apply styles to any element that shares a common class. This paragraph is <strong>italicized</strong> and underlined using a class selector.</p>
+
+        <h2>3. ID Selector</h2>
+        <p id="important-note">This paragraph is styled uniquely using an ID selector. It is <strong>bold</strong> and stands out from other elements on the page.</p>
+
+        <h2>4. Attribute Selector</h2>
+        <p><a href="https://www.example.com">Click here to visit Example</a>. Links with a specific attribute (in this case, <code>href</code> starting with "https") are styled with an attribute selector and are <em>italicized</em>.</p>
+
+        <h2>5. Pseudo-class and Pseudo-element</h2>
+        <p>CSS pseudo-classes and pseudo-elements provide advanced styling options. Hover over the link to see the pseudo-class in action, and notice the large first letter at the start of each paragraph styled using a pseudo-element.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Flexbox Layout - Web Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://png.pngtree.com/thumb_back/fw800/background/20230620/pngtree-futuristic-3d-render-of-abstract-background-with-neon-lights-in-pink-image_3649127.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+            align-content: space-between; /* Align content with space between lines */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; /* Allow items to wrap */
+            justify-content: space-around; /* Distribute items evenly with space around */
+            align-items: center; /* Center items vertically */
+            margin: 10px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .box {
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px;
+            text-align: center;
+            flex: 1;
+            min-width: 200px; /* Ensures minimum width for each box */
+        }
+
+        .box:nth-child(odd) {
+            background-color: #2ecc71; /* Different color for odd boxes */
+        }
+
+        .box.order-1 {
+            order: 1; /* Change order of items */
+        }
+
+        .box.order-2 {
+            order: 2;
+        }
+
+        .box.order-3 {
+            order: 3;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff; /* White color for heading */
+            margin: 20px 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adding text shadow for readability */
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #ffffff; /* White color for sub-headings */
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ffffff; /* White color for paragraph text */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Advanced Flexbox Layout in Web Design</h1>
+    
+    <div class="main-container">
+        <div class="section">
+            <div class="box order-2">
+                <h2>Responsive Design</h2>
+                <p>Responsive design ensures that web pages look good on all devices. Flexbox is essential for creating flexible and responsive layouts that adapt to different screen sizes.</p>
+            </div>
+            <div class="box order-1">
+                <h2>Content Alignment</h2>
+                <p>Proper alignment of content is crucial for a clean and professional appearance. Flexbox allows for precise alignment of elements both horizontally and vertically.</p>
+            </div>
+            <div class="box order-3">
+                <h2>Flexible Layouts</h2>
+                <p>Flexbox provides the tools to create flexible layouts that can adjust to content size. This makes designing adaptable and dynamic interfaces more straightforward.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="box">
+                <h2>Cross-Browser Compatibility</h2>
+                <p>Flexbox is supported across modern browsers, ensuring that layouts function consistently across different platforms and devices.</p>
+            </div>
+            <div class="box">
+                <h2>Efficiency in Design</h2>
+                <p>Using Flexbox can reduce the need for complex CSS and JavaScript for layout management, leading to cleaner and more maintainable code.</p>
+            </div>
+            <div class="box">
+                <h2>Aligning Items</h2>
+                <p>With Flexbox, you can easily align items to the center, start, or end of the container. This is useful for creating visually appealing and organized layouts.</p>
+            </div>
+            <div class="box">
+                <h2>Order and Wrapping</h2>
+                <p>Flexbox allows you to reorder items and control their wrapping behavior, providing more flexibility in how content is displayed and organized.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

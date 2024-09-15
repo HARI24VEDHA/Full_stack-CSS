@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key CSS Animations and Their Applications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://img.freepik.com/premium-photo/pink-blue-motion-blur-lines-background_199726-3287.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            color: #f39c12;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .animation-box {
+            width: 250px;
+            height: 250px;
+            margin: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            color: #fff;
+            line-height: 250px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+        }
+
+        /* Keyframes for animations */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Apply animations to the boxes */
+        .slide-in {
+            animation: slideIn 1s ease-out;
+            background-color: #3498db;
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+            background-color: #e74c3c;
+        }
+
+        .spin {
+            animation: spin 2s linear infinite;
+            background-color: #2ecc71;
+        }
+
+        .fade-in-out {
+            animation: fadeInOut 3s ease-in-out infinite;
+            background-color: #f39c12;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .animation-box {
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Key CSS Animations and Their Applications</h1>
+        <div class="animation-box slide-in">
+            <div>Slide In</div>
+            <p>This animation smoothly transitions the element from the left side of the screen, making it appear as if it's sliding into view.</p>
+        </div>
+        <div class="animation-box bounce">
+            <div>Bounce</div>
+            <p>This animation gives the element a bouncing effect, creating a dynamic and playful movement that draws attention.</p>
+        </div>
+        <div class="animation-box spin">
+            <div>Spin</div>
+            <p>This animation rotates the element continuously, giving it a spinning effect that can be used for loading indicators or visual interest.</p>
+        </div>
+        <div class="animation-box fade-in-out">
+            <div>Fade In/Out</div>
+            <p>This animation gradually changes the element's opacity, creating a smooth fading effect that can be used for transitions or emphasis.</p>
+        </div>
+    </div>
+</body>
+</html>
